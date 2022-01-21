@@ -1,0 +1,8 @@
+
+1;2022/01/16_23:50:33: Kundenkonto geoeffnet
+1;2022/01/16_23:50:38: 10 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 40.0 Euro
+1;2022/01/16_23:50:39: Kundenkonto geschlossen
+22;2022/01/16_23:50:58: Kunde mit 10 Euro Startguthaben angelegt.
+22;2022/01/16_23:50:58: Kundenkonto geoeffnet
+22;2022/01/16_23:51:01: 22 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 32.0 Euro
+22;2022/01/16_23:51:04: Kundenkonto geschlossen

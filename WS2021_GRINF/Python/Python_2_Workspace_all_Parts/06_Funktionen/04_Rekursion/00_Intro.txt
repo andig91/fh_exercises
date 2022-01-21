@@ -1,0 +1,6 @@
+Bei der rekursiven Programmierung ruft eine Funktion oder Methode in einem Programm sich selbst wieder auf 
+bzw. auch das gegenseitige wieder Aufrufen von mehreren Funktionen oder Methoden wird Rekursion genannt.
+Wichtig ist bei dieser Art der Programmierung die Abbruchbedingung weil sich der rekursive Teil sonnst 
+unendlich oft selbst wieder aufrufen würde ...
+Rekursive Funktionen tragen gut zur Lesbarkeit des Codes bei, meist werden aber iterative Strukturen verwendet 
+wenn diese von den Programmiersprachen unterstützt werden.  

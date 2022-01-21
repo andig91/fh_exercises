@@ -1,0 +1,22 @@
+--------------------------------------------------------------------------------------------------------------------------
+Platzhaltersymbol   |   Bedeutung
+--------------------------------------------------------------------------------------------------------------------------
+                d	|   Vorzeichenbehaftete Ganzzahl (Integer, dezimal).
+                i	|   Vorzeichenbehaftete Ganzzahl (Integer, dezimal).
+                o	|   vorzeichenlose Ganzzahlen (oktal)
+                u	|   vorzeichenlose Ganzzahlen (dezimal)
+                x	|   vorzeichenlose Ganzzahlen (hexadezimal)
+                X	|   vorzeichenlose Ganzzahlen (hexadezimal), Uppercase
+                e	|   Fließkommazahl im Exponentialformat (in Kleinbuchstaben).
+                E	|   Fließkommazahl im Exponentialformat (in Großbuchstaben).
+                f	|   wie e
+                F	|   wie E
+                g	|   Wie "e", wenn der Exponent größer ist als -4 oder oder kleiner als die Präzision. Ansonsten wie "f"
+                G	|   wie "E" und analog zu "g"
+                c	|   ein Zeichen
+                s	|   Eine Zeichenkette (String); beliebige Python-Objekte werden in String mittels der Methode str()) gewandelt.
+                r	|   siehe s
+                %	|   Es findet keine Argument-Konvertierung statt, es wird ein "%"-Zeichen ausgegeben.
+--------------------------------------------------------------------------------------------------------------------------
+Siehe: https://www.python-kurs.eu/python3_formatierte_ausgabe.php; https://pyformat.info/
+ 

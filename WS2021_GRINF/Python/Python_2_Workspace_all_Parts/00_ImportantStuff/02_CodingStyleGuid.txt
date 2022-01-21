@@ -1,0 +1,5 @@
+Kurz die wichtigsten Punkte bezüglich dem Coding Style:
+
+1. Variablen:   Beginnen mit einem Kleinbuchstaben und sollen lowerCamelCase entsprechen. Der Name soll selbstsprechend sein.
+                Neg. Bsps.: a,b,c, ...
+                Pos. Bsps.: numberOfIterations

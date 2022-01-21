@@ -1,0 +1,24 @@
+Generell werden die Statements in einem Code von oben nach unten in der Programmierreihenfolge abgearbeitet.
+Sehr oft gibt es aber Situationen wo man gewisse Teile mehrmals auf mehreren Elementen ausführen möchte.
+
+Hierfür gibt es verschiedene Schleifenbkonstrukte in den Programmiersprachen. In Pythom werden 3 Generelle 
+Konstrukte von Schleifen unterstützt:
+
+    -   while Schleifen:    Diese führtz eine Statement oder eine Gruppe von Statements so lange aus, solange 
+                            die zugrunde liegende Bedingung TRUE ist. Die Bedingung wird vor jeder Ausführung 
+                            der Schleife geprüft.
+    -   for Schleife:       Führt eine Abfolge von Anweisungen mehrmals aus und kürzt den Code, der die Schleifen
+                            -variable verwaltet.
+    -   nested Schleifen:   (Verschachtelte Schleifen) Man kann mehrere Schleifen innerhalb einer anderen Schleife 
+                            verwenden (while, for). 
+
+Schleifensteueranweisungen ändern die Ausführung von ihrer normalen Sequenz. Wenn die Ausführung einen Bereich 
+verlässt, werden alle automatischen Objekte, die in diesem Bereich erstellt wurden, zerstört. Python unterstützt 
+die folgenden Steueranweisungen:
+
+    -   breake Statement:   Beendet die Schleifenanweisung und übergibt die Ausführung an die Anweisung, die 
+                            unmittelbar auf die Schleife folgt.
+    -   continue Statement: Bewirkt, dass die Schleife den Rest des Körpers überspringt und den Zustand sofort 
+                            wiederholt, bevor er wiederholt wird.
+    -   pass Statement:     Die Pass-Anweisung in Python wird verwendet, wenn eine Anweisung syntaktisch benötigt
+                            wird, aber kein Befehl oder Code ausgeführt werden soll.

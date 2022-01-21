@@ -1,0 +1,12 @@
+Sortieralgorithmen dienen dazu Felder von Daten jedweder Art nach einer bestimmten Reihenfolge oder
+bestimmten definierten Kriterien zu sortieren. Dies kann von Integern bis hin zu komplexen Klassen
+durchgeführt werden. Wichtig ist hierbei immer zu definieren nach welchen Kriterien sortiert werden 
+soll. Bei Zahlen kann das Auf oder Absteigend sein, bei Klassen kann das nach dem Nachnamen, wenn 
+gleich dann nach Vornamen ... wenn gleich dann nach irgend einem anderen Kriterium sein. 
+
+Generell haben Sortieralgorithmen immer eine bestimmte Ordnung, also die Zeit die sie benötigen 
+um ein "unsortiertes" Feld von Daten zu sortieren.
+
+Beispielsweise hat der BubbleSort Algorithmus die Ordnung O(n^2) im Durchschnitt. Hingegen der 
+Quicksort hat die Ordnung O(n * log(n)) wodurch dieser wesentlich schneller ist als der  BubbleSort 
+im Durchschnitt.

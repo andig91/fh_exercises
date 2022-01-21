@@ -1,0 +1,274 @@
+1;2022/01/16_18:53:44: Kundenkonto geschlossen
+1;2022/01/16_18:57:46: Kundenkonto geoeffnet
+1;2022/01/16_18:57:51: 15 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 45.0Euro
+1;2022/01/16_18:57:57: Kundenkonto geschlossen
+1;2022/01/16_18:58:08: Kundenkonto geoeffnet
+1;2022/01/16_18:58:10: 111 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 141.0 Euro
+1;2022/01/16_18:58:15: Kundenkonto geschlossen
+1;2022/01/16_18:59:37: Kundenkonto geoeffnet
+1;2022/01/16_18:59:58: Kundenkonto geschlossen
+1;2022/01/16_19:00:11: Kundenkonto geoeffnet
+1;2022/01/16_19:00:13: Kundenkonto geschlossen
+1;2022/01/16_19:00:34: Kundenkonto geoeffnet
+1;2022/01/16_19:00:48: Kundenkonto geschlossen
+1;2022/01/16_19:02:12: Kundenkonto geoeffnet
+1;2022/01/16_19:02:22: Kundenkonto geschlossen
+2;2022/01/16_19:03:03: Kundenkonto geoeffnet
+2;2022/01/16_19:03:06: 10 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 24.0 Euro
+2;2022/01/16_19:03:11: Kundenkonto geschlossen
+2;2022/01/16_19:03:51: Kundenkonto geoeffnet
+2;2022/01/16_19:03:59: 10 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 24.0 Euro
+2;2022/01/16_19:04:39: 10 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 34.0 Euro
+2;2022/01/16_19:04:58: Kundenkonto geschlossen
+1;2022/01/16_21:34:05: Kundenkonto geoeffnet
+1;2022/01/16_21:34:08: 11 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 41.0 Euro
+1;2022/01/16_21:35:08: Kundenkonto geoeffnet
+1;2022/01/16_21:35:33: 11 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 16.0 Euro
+1;2022/01/16_21:36:02: Kundenkonto geschlossen
+1;2022/01/16_21:36:31: Kundenkonto geoeffnet
+1;2022/01/16_21:36:42: 23 Euro Guthaben wurde erfolgreich abgebucht. Kontostand: 7.0 Euro
+1;2022/01/16_21:36:44: Kundenkonto geschlossen
+1;2022/01/16_21:38:02: Kundenkonto geoeffnet
+1;2022/01/16_21:38:14: 25 Euro [25, 0] Guthaben wurde erfolgreich abgebucht. Kontostand: 5.0 Euro
+1;2022/01/16_21:38:36: Kundenkonto geschlossen
+1;2022/01/16_21:38:39: Kundenkonto geoeffnet
+1;2022/01/16_21:38:47: 18 Euro [Studierende, kein Service] Guthaben wurde erfolgreich abgebucht. Kontostand: 12.0 Euro
+1;2022/01/16_21:38:55: Kundenkonto geschlossen
+1;2022/01/16_21:55:48: Kundenkonto geoeffnet
+1;2022/01/16_21:55:54: 12 Euro [Kinder, kein Service] Guthaben wurde erfolgreich abgebucht. Kontostand: 18.0 Euro
+1;2022/01/16_21:56:07: Kundenkonto geschlossen
+1;2022/01/16_21:56:25: Kundenkonto geoeffnet
+1;2022/01/16_21:57:28: Kundenkonto geoeffnet
+1;2022/01/16_21:59:35: Kundenkonto geschlossen
+1;2022/01/16_21:59:38: Kundenkonto geoeffnet
+1;2022/01/16_21:59:48: Kundenkonto geschlossen
+22;2022/01/16_22:00:06: Kunde mit 10 Euro Startguthaben angelegt.
+22;2022/01/16_22:00:06: Kundenkonto geoeffnet
+22;2022/01/16_22:00:10: 20 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 30.0 Euro
+22;2022/01/16_22:00:14: 12 Euro [Kinder, kein Service] Guthaben wurde erfolgreich abgebucht. Kontostand: 18.0 Euro
+22;2022/01/16_22:00:18: Kundenkonto geschlossen
+22;2022/01/16_22:00:43: Kunde mit 10 Euro Startguthaben angelegt.
+22;2022/01/16_22:00:43: Kundenkonto geoeffnet
+22;2022/01/16_22:01:06: Kundenkonto geschlossen
+1;2022/01/16_22:02:12: Kundenkonto geoeffnet
+1;2022/01/16_22:03:29: Kundenkonto geschlossen
+1;2022/01/16_22:03:31: Kundenkonto geoeffnet
+1;2022/01/16_22:03:39: 25 Euro [Erwachsene, kein Service] Guthaben wurde erfolgreich abgebucht. Kontostand: 5.0 Euro
+1;2022/01/16_22:03:54: 100 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 105.0 Euro
+1;2022/01/16_22:03:59: 30 Euro [Erwachsene, Sauna] Guthaben wurde erfolgreich abgebucht. Kontostand: 75.0 Euro
+1;2022/01/16_22:04:04: 35 Euro [Erwachsene, Private SPA] Guthaben wurde erfolgreich abgebucht. Kontostand: 40.0 Euro
+1;2022/01/16_22:04:07: 25 Euro [Erwachsene, kein Service] Guthaben wurde erfolgreich abgebucht. Kontostand: 15.0 Euro
+1;2022/01/16_22:04:15: 100 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 115.0 Euro
+1;2022/01/16_22:04:18: 18 Euro [Studierende, kein Service] Guthaben wurde erfolgreich abgebucht. Kontostand: 97.0 Euro
+1;2022/01/16_22:04:22: Kundenkonto geschlossen
+3;2022/01/16_22:05:35: Kunde mit 10 Euro Startguthaben angelegt.
+3;2022/01/16_22:05:35: Kundenkonto geoeffnet
+3;2022/01/16_22:05:40: Kundenkonto geschlossen
+3;2022/01/16_22:05:53: Kunde mit 10 Euro Startguthaben angelegt.
+3;2022/01/16_22:05:53: Kundenkonto geoeffnet
+3;2022/01/16_22:05:55: Kundenkonto geschlossen
+1;2022/01/16_22:06:04: Kundenkonto geoeffnet
+1;2022/01/16_22:06:11: 18 Euro [Studierende, kein Service] Guthaben wurde erfolgreich abgebucht. Kontostand: 12.0 Euro
+1;2022/01/16_22:06:45: Kundenkonto geschlossen
+1;2022/01/16_22:12:52: Kundenkonto geoeffnet
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:12:53: Kundenkonto geschlossen
+1;2022/01/16_22:13:03: Kundenkonto geschlossen
+1;2022/01/16_22:13:06: Kundenkonto geschlossen
+1;2022/01/16_22:13:07: Kundenkonto geschlossen
+1;2022/01/16_22:13:08: Kundenkonto geschlossen
+1;2022/01/16_22:14:42: Kundenkonto geoeffnet
+1;2022/01/16_22:14:45: Kundenkonto geschlossen
+1;2022/01/16_22:15:23: Kundenkonto geoeffnet
+1;2022/01/16_22:15:24: Kundenkonto geschlossen
+1;2022/01/16_22:16:13: Kundenkonto geoeffnet
+1;2022/01/16_22:16:14: Kundenkonto geschlossen
+1;2022/01/16_22:16:59: Kundenkonto geoeffnet
+1;2022/01/16_22:17:00: Kundenkonto geschlossen
+1;2022/01/16_22:18:10: Kundenkonto geoeffnet
+1;2022/01/16_22:18:14: Kundenkonto geschlossen
+1;2022/01/16_22:19:09: Kundenkonto geoeffnet
+1;2022/01/16_22:19:10: Kundenkonto geschlossen
+1;2022/01/16_22:25:36: Kundenkonto geoeffnet
+1;2022/01/16_22:25:38: Kundenkonto geschlossen
+1;2022/01/16_22:26:16: Kundenkonto geoeffnet
+1;2022/01/16_22:26:17: Kundenkonto geschlossen
+1;2022/01/16_22:26:58: Kundenkonto geoeffnet
+1;2022/01/16_22:26:58: Kundenkonto geschlossen
+1;2022/01/16_22:27:11: Kundenkonto geoeffnet
+1;2022/01/16_22:27:12: Kundenkonto geschlossen
+1;2022/01/16_22:27:52: Kundenkonto geoeffnet
+1;2022/01/16_22:27:53: Kundenkonto geschlossen
+1;2022/01/16_22:29:44: Kundenkonto geoeffnet
+1;2022/01/16_22:29:45: Kundenkonto geschlossen
+1;2022/01/16_22:30:13: Kundenkonto geoeffnet
+1;2022/01/16_22:30:14: Kundenkonto geschlossen
+1;2022/01/16_22:30:29: Kundenkonto geoeffnet
+1;2022/01/16_22:30:30: Kundenkonto geschlossen
+1;2022/01/16_22:31:32: Kundenkonto geoeffnet
+1;2022/01/16_22:31:33: Kundenkonto geschlossen
+1;2022/01/16_22:33:14: Kundenkonto geoeffnet
+1;2022/01/16_22:33:15: Kundenkonto geschlossen
+1;2022/01/16_22:37:36: Kundenkonto geoeffnet
+1;2022/01/16_22:37:37: Kundenkonto geschlossen
+1;2022/01/16_22:37:42: Kundenkonto geoeffnet
+1;2022/01/16_22:37:53: Kundenkonto geschlossen
+2;2022/01/16_22:37:54: Kundenkonto geoeffnet
+2;2022/01/16_22:38:00: 11 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 25.0 Euro
+2;2022/01/16_22:38:01: Kundenkonto geschlossen
+1;2022/01/16_22:38:03: Kundenkonto geoeffnet
+1;2022/01/16_22:38:19: Kundenkonto geschlossen
+1;2022/01/16_22:38:41: Kundenkonto geoeffnet
+1;2022/01/16_22:38:42: Kundenkonto geschlossen
+1;2022/01/16_22:41:23: Kundenkonto geoeffnet
+1;2022/01/16_22:41:24: Kundenkonto geschlossen
+1;2022/01/16_22:41:59: Kundenkonto geoeffnet
+1;2022/01/16_22:42:00: Kundenkonto geschlossen
+1;2022/01/16_22:42:09: Kundenkonto geoeffnet
+1;2022/01/16_22:42:10: Kundenkonto geschlossen
+1;2022/01/16_22:43:21: Kundenkonto geoeffnet
+1;2022/01/16_22:43:23: Kundenkonto geschlossen
+1;2022/01/16_22:43:38: Kundenkonto geoeffnet
+1;2022/01/16_22:43:39: Kundenkonto geschlossen
+1;2022/01/16_22:43:47: Kundenkonto geoeffnet
+1;2022/01/16_22:43:49: Kundenkonto geschlossen
+1;2022/01/16_22:45:02: Kundenkonto geoeffnet
+1;2022/01/16_22:45:03: Kundenkonto geschlossen
+1;2022/01/16_22:47:30: Kundenkonto geoeffnet
+1;2022/01/16_22:47:31: Kundenkonto geschlossen
+1;2022/01/16_22:49:02: Kundenkonto geoeffnet
+1;2022/01/16_22:49:02: Kundenkonto geschlossen
+1;2022/01/16_22:50:01: Kundenkonto geoeffnet
+1;2022/01/16_22:50:02: Kundenkonto geschlossen
+1;2022/01/16_22:52:30: Kundenkonto geoeffnet
+1;2022/01/16_22:52:31: Kundenkonto geschlossen
+1;2022/01/16_22:52:47: Kundenkonto geoeffnet
+1;2022/01/16_22:52:48: Kundenkonto geschlossen
+1;2022/01/16_22:53:06: Kundenkonto geoeffnet
+1;2022/01/16_22:53:07: Kundenkonto geschlossen
+1;2022/01/16_22:53:39: Kundenkonto geoeffnet
+1;2022/01/16_22:53:40: Kundenkonto geschlossen
+1;2022/01/16_22:54:45: Kundenkonto geoeffnet
+1;2022/01/16_22:54:49: Kundenkonto geschlossen
+1;2022/01/16_22:55:02: Kundenkonto geoeffnet
+1;2022/01/16_22:55:03: Kundenkonto geschlossen
+1;2022/01/16_22:55:45: Kundenkonto geoeffnet
+1;2022/01/16_22:55:46: Kundenkonto geschlossen
+1;2022/01/16_22:55:56: Kundenkonto geoeffnet
+1;2022/01/16_22:55:57: Kundenkonto geschlossen
+1;2022/01/16_22:57:16: Kundenkonto geoeffnet
+1;2022/01/16_22:57:16: Kundenkonto geschlossen
+2;2022/01/16_22:57:18: Kundenkonto geoeffnet
+2;2022/01/16_22:57:22: Kundenkonto geschlossen
+33;2022/01/16_22:57:33: Kunde mit 10 Euro Startguthaben angelegt.
+33;2022/01/16_22:57:33: Kundenkonto geoeffnet
+33;2022/01/16_22:57:36: 100 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 110.0 Euro
+33;2022/01/16_22:57:40: 18 Euro [Studierende, kein Service] Guthaben wurde erfolgreich abgebucht. Kontostand: 92.0 Euro
+33;2022/01/16_22:57:43: Kundenkonto geschlossen
+22;2022/01/16_22:58:02: Kunde mit 10 Euro Startguthaben angelegt.
+22;2022/01/16_22:58:02: Kundenkonto geoeffnet
+22;2022/01/16_22:58:04: 22 Euro Guthaben wurde erfolgreich aufgeladen. Kontostand: 32.0 Euro
+22;2022/01/16_22:58:06: Kundenkonto geschlossen
+22;2022/01/16_22:58:07: Kundenkonto geoeffnet
+22;2022/01/16_22:58:10: Kundenkonto geschlossen
+1;2022/01/16_23:07:51: Kundenkonto geoeffnet
+1;2022/01/16_23:07:52: Kundenkonto geschlossen

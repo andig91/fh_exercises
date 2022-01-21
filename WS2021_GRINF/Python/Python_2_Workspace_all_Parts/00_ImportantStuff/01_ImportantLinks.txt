@@ -1,0 +1,15 @@
+Wichtige Links die wir noch brauchen werden:
+
+Python Reference: https://docs.python.org/2/reference/index.html
+
+Diverse Links die für die Vorbereitung verwendet wurden:
+https://www.tutorialspoint.com/python
+
+Buecher die verwendet werden koennen um mehr ueber Python zu erfahren:
+https://search-fhp.obvsg.at/primo_library/libweb/action/search.do?vid=FHP
+http://www.davekuhlman.org/python_book_01.pdf
+http://tdc-www.harvard.edu/Python.pdf
+https://doc.lagout.org/programmation/python/Beginning%20Programming%20with%20Python%20for%20Dummies%20%5BMueller%202014-09-22%5D.pdf
+
+Bezueglich der Rekursion :-)
+https://www.heise.de/developer/artikel/Weg-mit-den-Schleifen-4009774.html?seite=all
