@@ -1,0 +1,18 @@
+[
+   payload.date.date,
+   payload.date.years
+]
+
+{
+   "brightness_pct" : payload.date.date,
+   "hs_color" : payload.date.years
+}
+
+
+payload: {
+   "payload.date": msg.payload.date.date,
+   "payload.years": msg.payload.date.years
+}
+
+https://goqr.me/de/api/doc/create-qr-code/#param_color
+https://ecampus.fhstp.ac.at/pluginfile.php/860107/mod_resource/content/3/CPP_%C3%9Cbungen_gesamt.pdf
