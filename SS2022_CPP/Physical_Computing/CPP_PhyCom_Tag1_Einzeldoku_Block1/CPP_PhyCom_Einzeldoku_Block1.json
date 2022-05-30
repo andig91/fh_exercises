@@ -1,0 +1,1172 @@
+[
+    {
+        "id": "c83db2ae0d0d3526",
+        "type": "tab",
+        "label": "Block1 node-RED Projekt ",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f98be553cd33fb4c",
+        "type": "http request",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.opensensemap.org/boxes/5d690d11953683001aa8e7c6/data",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 750,
+        "y": 880,
+        "wires": [
+            [
+                "22c38118b84e4c2d"
+            ]
+        ]
+    },
+    {
+        "id": "22c38118b84e4c2d",
+        "type": "debug",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "0267d16272d14958",
+        "type": "inject",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 880,
+        "wires": [
+            [
+                "79c30689e3ac3703"
+            ]
+        ]
+    },
+    {
+        "id": "79c30689e3ac3703",
+        "type": "function",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "func": "msg.headers = {\n    \"content-type\" : \"application/json\"\n}\nmsg.payload = {\n\"5d690d11953683001aa8e7cb\":\"112\",\n\n\"6033e03b787061001c18374a\": \"31\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 880,
+        "wires": [
+            [
+                "f98be553cd33fb4c"
+            ]
+        ]
+    },
+    {
+        "id": "55d56dab3ebb0d73",
+        "type": "inject",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 480,
+        "wires": [
+            [
+                "168ee410bba8c709"
+            ]
+        ]
+    },
+    {
+        "id": "168ee410bba8c709",
+        "type": "http request",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.opensensemap.org/boxes/5d690d11953683001aa8e7c6/sensors",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "credentials": {},
+        "x": 770,
+        "y": 480,
+        "wires": [
+            [
+                "90d361a4709fd3f6",
+                "dd0f2f9930e250ef",
+                "22d7474550a7369b",
+                "dc38888586906e6e",
+                "fb4252564ab1b76c",
+                "98fb3fe35fb8770a"
+            ]
+        ]
+    },
+    {
+        "id": "90d361a4709fd3f6",
+        "type": "debug",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.sensors[0].lastMeasurement.value",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "dd0f2f9930e250ef",
+        "type": "ui_text",
+        "z": "c83db2ae0d0d3526",
+        "group": "a33eeeb1bc066c16",
+        "order": 1,
+        "width": "5",
+        "height": "1",
+        "name": "",
+        "label": "0: {{msg.payload.sensors[0].title}}",
+        "format": "{{msg.payload.sensors[0].lastMeasurement.value}} {{msg.payload.sensors[0].unit}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1010,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "9b3a689fb5e3a97a",
+        "type": "ui_button",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "group": "a33eeeb1bc066c16",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Download Data",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 260,
+        "y": 540,
+        "wires": [
+            [
+                "168ee410bba8c709"
+            ]
+        ]
+    },
+    {
+        "id": "22d7474550a7369b",
+        "type": "debug",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "dc38888586906e6e",
+        "type": "ui_text",
+        "z": "c83db2ae0d0d3526",
+        "group": "a33eeeb1bc066c16",
+        "order": 2,
+        "width": "5",
+        "height": "1",
+        "name": "",
+        "label": "2: {{msg.payload.sensors[2].title}}",
+        "format": "{{msg.payload.sensors[2].lastMeasurement.value}} {{msg.payload.sensors[2].unit}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1010,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "fb4252564ab1b76c",
+        "type": "ui_text",
+        "z": "c83db2ae0d0d3526",
+        "group": "a33eeeb1bc066c16",
+        "order": 3,
+        "width": "5",
+        "height": "1",
+        "name": "",
+        "label": "3: {{msg.payload.sensors[3].title}}",
+        "format": "{{msg.payload.sensors[3].lastMeasurement.value}} {{msg.payload.sensors[3].unit}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1010,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "98fb3fe35fb8770a",
+        "type": "ui_text",
+        "z": "c83db2ae0d0d3526",
+        "group": "a33eeeb1bc066c16",
+        "order": 4,
+        "width": "5",
+        "height": "1",
+        "name": "",
+        "label": "4: {{msg.payload.sensors[7].title}}",
+        "format": "{{msg.payload.sensors[7].lastMeasurement.value}} {{msg.payload.sensors[7].unit}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1010,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "406a3218de919916",
+        "type": "ui_dropdown",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "label": "Sensor A:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "51df3ba9088d312f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "0: Temperatur",
+                "value": "5d690d11953683001aa8e7cb",
+                "type": "str"
+            },
+            {
+                "label": "1: sensor1",
+                "value": "602d49d4a79cbd001bfdbc7f",
+                "type": "str"
+            },
+            {
+                "label": "2: sensor2",
+                "value": "6033e03b787061001c18374a",
+                "type": "str"
+            },
+            {
+                "label": "3: sensor3",
+                "value": "6033e03b787061001c18374b",
+                "type": "str"
+            },
+            {
+                "label": "4: sensor4",
+                "value": "6033e063787061001c18470c",
+                "type": "str"
+            },
+            {
+                "label": "5: sensor4",
+                "value": "6210db3de00700001bae970d",
+                "type": "str"
+            },
+            {
+                "label": "6: sensor6",
+                "value": "6210db3de00700001bae970e",
+                "type": "str"
+            },
+            {
+                "label": "7: bauteile",
+                "value": "6210db3de00700001bae970f",
+                "type": "str"
+            },
+            {
+                "label": "8: sensor8",
+                "value": "6210db3de00700001bae9710",
+                "type": "str"
+            },
+            {
+                "label": "9: sensor9",
+                "value": "6210db3de00700001bae9711",
+                "type": "str"
+            },
+            {
+                "label": "10: sensor10",
+                "value": "6210db3de00700001bae9712",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 460,
+        "y": 1100,
+        "wires": [
+            [
+                "3e91d110941aac81"
+            ]
+        ]
+    },
+    {
+        "id": "e0c4ed654a811f95",
+        "type": "ui_button",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "group": "51df3ba9088d312f",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Upload Selected",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 250,
+        "y": 1720,
+        "wires": [
+            [
+                "d98bf3ed88f1a14d"
+            ]
+        ]
+    },
+    {
+        "id": "044366c0664d555c",
+        "type": "ui_text_input",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "label": "Input A:",
+        "tooltip": "",
+        "group": "51df3ba9088d312f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "msg",
+        "x": 460,
+        "y": 1160,
+        "wires": [
+            [
+                "ba6c242becbc1065"
+            ]
+        ]
+    },
+    {
+        "id": "3e91d110941aac81",
+        "type": "change",
+        "z": "c83db2ae0d0d3526",
+        "name": "sensorchosen1",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sensorchosen1",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8389a394218f11a",
+        "type": "change",
+        "z": "c83db2ae0d0d3526",
+        "name": "sensorchosen2",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sensorchosen2",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "556ca6effbca8213",
+        "type": "change",
+        "z": "c83db2ae0d0d3526",
+        "name": "sensorchosen3",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sensorchosen3",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8d866aeaf130f3d6",
+        "type": "change",
+        "z": "c83db2ae0d0d3526",
+        "name": "sensorchosen4",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "sensorchosen4",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3f04e9a77a28d46",
+        "type": "ui_dropdown",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "label": "Sensor B:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "51df3ba9088d312f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "0: Temperatur",
+                "value": "5d690d11953683001aa8e7cb",
+                "type": "str"
+            },
+            {
+                "label": "1: sensor1",
+                "value": "602d49d4a79cbd001bfdbc7f",
+                "type": "str"
+            },
+            {
+                "label": "2: sensor2",
+                "value": "6033e03b787061001c18374a",
+                "type": "str"
+            },
+            {
+                "label": "3: sensor3",
+                "value": "6033e03b787061001c18374b",
+                "type": "str"
+            },
+            {
+                "label": "4: sensor4",
+                "value": "6033e063787061001c18470c",
+                "type": "str"
+            },
+            {
+                "label": "5: sensor4",
+                "value": "6210db3de00700001bae970d",
+                "type": "str"
+            },
+            {
+                "label": "6: sensor6",
+                "value": "6210db3de00700001bae970e",
+                "type": "str"
+            },
+            {
+                "label": "7: bauteile",
+                "value": "6210db3de00700001bae970f",
+                "type": "str"
+            },
+            {
+                "label": "8: sensor8",
+                "value": "6210db3de00700001bae9710",
+                "type": "str"
+            },
+            {
+                "label": "9: sensor9",
+                "value": "6210db3de00700001bae9711",
+                "type": "str"
+            },
+            {
+                "label": "10: sensor10",
+                "value": "6210db3de00700001bae9712",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 460,
+        "y": 1220,
+        "wires": [
+            [
+                "c8389a394218f11a"
+            ]
+        ]
+    },
+    {
+        "id": "d55ad98a134a4a1f",
+        "type": "ui_dropdown",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "label": "Sensor C:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "51df3ba9088d312f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "0: Temperatur",
+                "value": "5d690d11953683001aa8e7cb",
+                "type": "str"
+            },
+            {
+                "label": "1: sensor1",
+                "value": "602d49d4a79cbd001bfdbc7f",
+                "type": "str"
+            },
+            {
+                "label": "2: sensor2",
+                "value": "6033e03b787061001c18374a",
+                "type": "str"
+            },
+            {
+                "label": "3: sensor3",
+                "value": "6033e03b787061001c18374b",
+                "type": "str"
+            },
+            {
+                "label": "4: sensor4",
+                "value": "6033e063787061001c18470c",
+                "type": "str"
+            },
+            {
+                "label": "5: sensor4",
+                "value": "6210db3de00700001bae970d",
+                "type": "str"
+            },
+            {
+                "label": "6: sensor6",
+                "value": "6210db3de00700001bae970e",
+                "type": "str"
+            },
+            {
+                "label": "7: bauteile",
+                "value": "6210db3de00700001bae970f",
+                "type": "str"
+            },
+            {
+                "label": "8: sensor8",
+                "value": "6210db3de00700001bae9710",
+                "type": "str"
+            },
+            {
+                "label": "9: sensor9",
+                "value": "6210db3de00700001bae9711",
+                "type": "str"
+            },
+            {
+                "label": "10: sensor10",
+                "value": "6210db3de00700001bae9712",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 460,
+        "y": 1340,
+        "wires": [
+            [
+                "556ca6effbca8213"
+            ]
+        ]
+    },
+    {
+        "id": "857685ef5879f059",
+        "type": "ui_dropdown",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "label": "Sensor D:",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "51df3ba9088d312f",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "0: Temperatur",
+                "value": "5d690d11953683001aa8e7cb",
+                "type": "str"
+            },
+            {
+                "label": "1: sensor1",
+                "value": "602d49d4a79cbd001bfdbc7f",
+                "type": "str"
+            },
+            {
+                "label": "2: sensor2",
+                "value": "6033e03b787061001c18374a",
+                "type": "str"
+            },
+            {
+                "label": "3: sensor3",
+                "value": "6033e03b787061001c18374b",
+                "type": "str"
+            },
+            {
+                "label": "4: sensor4",
+                "value": "6033e063787061001c18470c",
+                "type": "str"
+            },
+            {
+                "label": "5: sensor4",
+                "value": "6210db3de00700001bae970d",
+                "type": "str"
+            },
+            {
+                "label": "6: sensor6",
+                "value": "6210db3de00700001bae970e",
+                "type": "str"
+            },
+            {
+                "label": "7: bauteile",
+                "value": "6210db3de00700001bae970f",
+                "type": "str"
+            },
+            {
+                "label": "8: sensor8",
+                "value": "6210db3de00700001bae9710",
+                "type": "str"
+            },
+            {
+                "label": "9: sensor9",
+                "value": "6210db3de00700001bae9711",
+                "type": "str"
+            },
+            {
+                "label": "10: sensor10",
+                "value": "6210db3de00700001bae9712",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 460,
+        "y": 1460,
+        "wires": [
+            [
+                "8d866aeaf130f3d6"
+            ]
+        ]
+    },
+    {
+        "id": "ba6c242becbc1065",
+        "type": "change",
+        "z": "c83db2ae0d0d3526",
+        "name": "valuesens1",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "valuesens1",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5a2f491188ded42",
+        "type": "ui_text_input",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "label": "Input B:",
+        "tooltip": "",
+        "group": "51df3ba9088d312f",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "msg",
+        "x": 460,
+        "y": 1280,
+        "wires": [
+            [
+                "5883827089a39f34"
+            ]
+        ]
+    },
+    {
+        "id": "5883827089a39f34",
+        "type": "change",
+        "z": "c83db2ae0d0d3526",
+        "name": "valuesens2",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "valuesens2",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d9304efb25f6ceaa",
+        "type": "ui_text_input",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "label": "Input C:",
+        "tooltip": "",
+        "group": "51df3ba9088d312f",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "msg",
+        "x": 460,
+        "y": 1400,
+        "wires": [
+            [
+                "4d2077ed5608a0bb"
+            ]
+        ]
+    },
+    {
+        "id": "4d2077ed5608a0bb",
+        "type": "change",
+        "z": "c83db2ae0d0d3526",
+        "name": "valuesens3",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "valuesens3",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "79d2358ef2747fd0",
+        "type": "ui_text_input",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "label": "Input D:",
+        "tooltip": "",
+        "group": "51df3ba9088d312f",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "msg",
+        "x": 460,
+        "y": 1520,
+        "wires": [
+            [
+                "abd068ad14251743"
+            ]
+        ]
+    },
+    {
+        "id": "abd068ad14251743",
+        "type": "change",
+        "z": "c83db2ae0d0d3526",
+        "name": "valuesens4",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "valuesens4",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "922613cd497ab521",
+        "type": "http request",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.opensensemap.org/boxes/5d690d11953683001aa8e7c6/data",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "credentials": {},
+        "x": 810,
+        "y": 1760,
+        "wires": [
+            [
+                "d8c355912df0c1b5"
+            ]
+        ]
+    },
+    {
+        "id": "d8c355912df0c1b5",
+        "type": "debug",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "3b9fdf7f58cb2684",
+        "type": "inject",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 1760,
+        "wires": [
+            [
+                "d98bf3ed88f1a14d"
+            ]
+        ]
+    },
+    {
+        "id": "d98bf3ed88f1a14d",
+        "type": "function",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "func": "msg.headers = {\n    \"content-type\" : \"application/json\"\n};\nmsg.payload = {\n    \n};\n//msg.payload = {\n//\"5d690d11953683001aa8e7cb\":\"112\",\n//\n//\"6033e03b787061001c18374a\": \"31\"\n//}\n\n//key = flow.get(\"sensorchosen1\");\n//value = flow.get(\"valuesens1\");\n\n\n//msg.payload = {\n//[key] : value\n//\n//}\n\nif (flow.get(\"valuesens1\")!==undefined && flow.get(\"valuesens1\")!==null && flow.get(\"sensorchosen1\")!==undefined && flow.get(\"sensorchosen1\")!==null) \n{\nmsg.payload[flow.get(\"sensorchosen1\")] = flow.get(\"valuesens1\");\n}\nif (flow.get(\"valuesens2\")!==undefined && flow.get(\"valuesens2\")!==null && flow.get(\"sensorchosen2\")!==undefined && flow.get(\"sensorchosen2\")!==null) \n{\nmsg.payload[flow.get(\"sensorchosen2\")] = flow.get(\"valuesens2\");\n}\nif (flow.get(\"valuesens3\")!==undefined && flow.get(\"valuesens3\")!==null && flow.get(\"sensorchosen3\")!==undefined && flow.get(\"sensorchosen3\")!==null) \n{\nmsg.payload[flow.get(\"sensorchosen3\")] = flow.get(\"valuesens3\");\n}\nif (flow.get(\"valuesens4\")!==undefined && flow.get(\"valuesens4\")!==null && flow.get(\"sensorchosen4\")!==undefined && flow.get(\"sensorchosen4\")!==null) \n{\nmsg.payload[flow.get(\"sensorchosen4\")] = flow.get(\"valuesens4\");\n}\n\n//if (flow.get(\"valuesens1\")!==undefined)\n//{\n//    msg.text = flow.get(\"text\");\n//}\n//else\n//{\n//    msg.text = \"http://localhost:1880/\";\n//}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1760,
+        "wires": [
+            [
+                "922613cd497ab521",
+                "bc8c262fec910ad2"
+            ]
+        ]
+    },
+    {
+        "id": "bc8c262fec910ad2",
+        "type": "debug",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "b919de8920433387",
+        "type": "inject",
+        "z": "c83db2ae0d0d3526",
+        "name": "RESET_INPUTS",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 260,
+        "y": 1340,
+        "wires": [
+            [
+                "406a3218de919916",
+                "044366c0664d555c",
+                "f3f04e9a77a28d46",
+                "d5a2f491188ded42",
+                "d55ad98a134a4a1f",
+                "d9304efb25f6ceaa",
+                "857685ef5879f059",
+                "79d2358ef2747fd0",
+                "38cee1099ecd4ed1"
+            ]
+        ]
+    },
+    {
+        "id": "38cee1099ecd4ed1",
+        "type": "function",
+        "z": "c83db2ae0d0d3526",
+        "name": "",
+        "func": "flow.set('sensorchosen1',undefined);\nflow.set('sensorchosen2',undefined);\nflow.set('sensorchosen3',undefined);\nflow.set('sensorchosen4',undefined);\nflow.set('valuesens1',undefined);\nflow.set('valuesens2',undefined);\nflow.set('valuesens3',undefined);\nflow.set('valuesens4',undefined);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar last = \"35\"",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7084fbbe6db90349",
+        "type": "comment",
+        "z": "c83db2ae0d0d3526",
+        "name": "Download 4 fixierte Sensoren",
+        "info": "Download 4 fixierte Sensoren",
+        "x": 240,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "c6435019dfedee25",
+        "type": "comment",
+        "z": "c83db2ae0d0d3526",
+        "name": "Test Push Sensor-Data",
+        "info": "",
+        "x": 200,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "9ad1ab22e446a4e9",
+        "type": "comment",
+        "z": "c83db2ae0d0d3526",
+        "name": "Waehle 4 Sensoren aus und gib Werte ein zum hochladen",
+        "info": "",
+        "x": 350,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "ef2b982f04879bd5",
+        "type": "comment",
+        "z": "c83db2ae0d0d3526",
+        "name": "Mit den Klick auf den Button werden die oben eingebenen Daten gepusht",
+        "info": "",
+        "x": 420,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "a33eeeb1bc066c16",
+        "type": "ui_group",
+        "name": "OpenSenseMap Read",
+        "tab": "f0bb6236b567105f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "51df3ba9088d312f",
+        "type": "ui_group",
+        "name": "OpenSenseMap Write",
+        "tab": "f0bb6236b567105f",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f0bb6236b567105f",
+        "type": "ui_tab",
+        "name": "OpenSenseMap",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]

@@ -1,0 +1,976 @@
+[
+    {
+        "id": "37489b5dcd7fbaf0",
+        "type": "tab",
+        "label": "Uebung_Tag1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f566a181c006b5dc",
+        "type": "inject",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.value",
+                "v": "Hahaha FHstp",
+                "vt": "str"
+            },
+            {
+                "p": "payload.name",
+                "v": "Andi",
+                "vt": "str"
+            },
+            {
+                "p": "payload.date",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 340,
+        "wires": [
+            [
+                "474bc27656667078",
+                "772053a64ffe446e"
+            ]
+        ]
+    },
+    {
+        "id": "474bc27656667078",
+        "type": "moment",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "topic": "",
+        "input": "payload.date",
+        "inputType": "msg",
+        "inTz": "Europe/Vienna",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "object",
+        "locale": "de-DE",
+        "output": "payload.date",
+        "outputType": "msg",
+        "outTz": "Europe/Vienna",
+        "x": 460,
+        "y": 620,
+        "wires": [
+            [
+                "f1d64e4ce809d842",
+                "8bd7f15d09375bd7",
+                "7cb78f4729d07cbc",
+                "3008cdfb9ff2631b",
+                "5596695adf28fd79",
+                "8c254745edca1609",
+                "3c52e0b6cf4acd23",
+                "97a8a205970a5e56",
+                "b3188b3369988dd1",
+                "4a041bdf107d0fb9"
+            ]
+        ]
+    },
+    {
+        "id": "f1d64e4ce809d842",
+        "type": "debug",
+        "z": "37489b5dcd7fbaf0",
+        "name": "payload.date.[years,date]",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.date.[years,date]",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "772053a64ffe446e",
+        "type": "debug",
+        "z": "37489b5dcd7fbaf0",
+        "name": "Standard Payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "7d9a5af32ee2f35f",
+        "type": "debug",
+        "z": "37489b5dcd7fbaf0",
+        "name": "IP Payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "8bd7f15d09375bd7",
+        "type": "debug",
+        "z": "37489b5dcd7fbaf0",
+        "name": "[\t   payload.date.date,\t   payload.date.years\t]",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "[\t   payload.date.date,\t   payload.date.years\t]",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7add45b775260a5d",
+        "type": "ip",
+        "z": "37489b5dcd7fbaf0",
+        "name": "ip",
+        "https": false,
+        "timeout": "5000",
+        "internalIPv4": true,
+        "internalIPv6": false,
+        "publicIPv4": true,
+        "publicIPv6": false,
+        "x": 450,
+        "y": 1060,
+        "wires": [
+            [
+                "7d9a5af32ee2f35f",
+                "a8e706f040c27b61",
+                "bf5f5bad443804c0",
+                "5bfec474e42e89f5"
+            ]
+        ]
+    },
+    {
+        "id": "b1e9c14a6eace01f",
+        "type": "inject",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 1060,
+        "wires": [
+            [
+                "7add45b775260a5d"
+            ]
+        ]
+    },
+    {
+        "id": "7cb78f4729d07cbc",
+        "type": "range",
+        "z": "37489b5dcd7fbaf0",
+        "minin": "0",
+        "maxin": "60",
+        "minout": "0",
+        "maxout": "100",
+        "action": "scale",
+        "round": true,
+        "property": "payload.date.seconds",
+        "name": "",
+        "x": 690,
+        "y": 660,
+        "wires": [
+            [
+                "3fead0c2a332c417",
+                "16fe8c0ecd44ecf7",
+                "7058ec10de4788cf"
+            ]
+        ]
+    },
+    {
+        "id": "3fead0c2a332c417",
+        "type": "debug",
+        "z": "37489b5dcd7fbaf0",
+        "name": "Sekunden 0-100",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.date.seconds",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "16fe8c0ecd44ecf7",
+        "type": "ui_gauge",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "group": "8afaf55a196b0d9e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Sekunden in %",
+        "label": "%",
+        "format": "{{payload.date.seconds}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 900,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "3008cdfb9ff2631b",
+        "type": "debug",
+        "z": "37489b5dcd7fbaf0",
+        "name": "{\t    \"date2\" : {\t       \"date\" : msg.payload.date.date,\t        \"years\" : msg.payload.date.years\t    }\t}\t",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "{\t    \"date2\" : {\t       \"date\" : msg.payload.date.date,\t        \"years\" : msg.payload.date.years\t    }\t}\t",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "5596695adf28fd79",
+        "type": "range",
+        "z": "37489b5dcd7fbaf0",
+        "minin": "0",
+        "maxin": "60",
+        "minout": "0",
+        "maxout": "100",
+        "action": "scale",
+        "round": true,
+        "property": "payload.date.minutes",
+        "name": "",
+        "x": 690,
+        "y": 780,
+        "wires": [
+            [
+                "a3be1986db39f3e3",
+                "7840936deac70f70"
+            ]
+        ]
+    },
+    {
+        "id": "a3be1986db39f3e3",
+        "type": "debug",
+        "z": "37489b5dcd7fbaf0",
+        "name": "Minuten 0-100",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.date.minutes",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "7840936deac70f70",
+        "type": "ui_gauge",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "group": "54163bbd91fb88f7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Minuten in %",
+        "label": "%",
+        "format": "{{payload.date.minutes}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 890,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "8c254745edca1609",
+        "type": "ui_text",
+        "z": "37489b5dcd7fbaf0",
+        "group": "8afaf55a196b0d9e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Stunde des Tages",
+        "format": "{{msg.payload.date.hours}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 710,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "3c52e0b6cf4acd23",
+        "type": "debug",
+        "z": "37489b5dcd7fbaf0",
+        "name": "Payload Zeitstempel formatiert",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "516cda5b835b7124",
+        "type": "ui_text_input",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "label": "QR-Code Eingabe",
+        "tooltip": "",
+        "group": "e7fd0c21c9b78d5e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "eingabe",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 230,
+        "y": 1500,
+        "wires": [
+            [
+                "474173b474bca553"
+            ]
+        ]
+    },
+    {
+        "id": "741dfa3fd592d38f",
+        "type": "ui_template",
+        "z": "37489b5dcd7fbaf0",
+        "group": "e7fd0c21c9b78d5e",
+        "name": "",
+        "order": 3,
+        "width": "4",
+        "height": "4",
+        "format": "<img src=\"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{msg.text}}&color={{msg.color}}\">\n<!--<img src=\"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{msg.payload}}&color={{msg.color}}\">-->",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1040,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8f5a19fd5c9baa0",
+        "type": "ui_colour_picker",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "label": "Farbe",
+        "group": "e7fd0c21c9b78d5e",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": true,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 2,
+        "width": "5",
+        "height": "4",
+        "passthru": true,
+        "topic": "colour",
+        "topicType": "msg",
+        "className": "",
+        "x": 210,
+        "y": 1580,
+        "wires": [
+            [
+                "57925d142192b36d",
+                "5aa03ed1d46d4b0d"
+            ]
+        ]
+    },
+    {
+        "id": "57925d142192b36d",
+        "type": "change",
+        "z": "37489b5dcd7fbaf0",
+        "name": "umwandeln",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "color",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 1580,
+        "wires": [
+            [
+                "83940edf02445c64"
+            ]
+        ]
+    },
+    {
+        "id": "474173b474bca553",
+        "type": "change",
+        "z": "37489b5dcd7fbaf0",
+        "name": "umwandeln",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "text",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 1500,
+        "wires": [
+            [
+                "83940edf02445c64"
+            ]
+        ]
+    },
+    {
+        "id": "e1675fcc10d8dba0",
+        "type": "debug",
+        "z": "37489b5dcd7fbaf0",
+        "name": "Text und Farbe fuer QR",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "3b8d73bd3be2c958",
+        "type": "inject",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 1380,
+        "wires": [
+            [
+                "e952bcc8bd896885"
+            ]
+        ]
+    },
+    {
+        "id": "e952bcc8bd896885",
+        "type": "function",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "func": "flow.set('text',undefined);\nflow.set('color',undefined);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar last = \"35\"",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "83940edf02445c64",
+        "type": "function",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "func": "if (flow.get(\"text\")!==undefined)\n{\n    msg.text = flow.get(\"text\");\n}\nelse\n{\n    msg.text = \"http://localhost:1880/ui\";\n}\nif (flow.get(\"color\")!==undefined)\n{\n    msg.color = flow.get(\"color\");\n}\nelse\n{\n    msg.color = \"000000\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n//var msg.test2 = \"http://localhost:1880/\";\n//var msg.test3 = \"000000;\"\n//return msg;",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 1540,
+        "wires": [
+            [
+                "e1675fcc10d8dba0",
+                "741dfa3fd592d38f"
+            ]
+        ]
+    },
+    {
+        "id": "a8e706f040c27b61",
+        "type": "ui_text",
+        "z": "37489b5dcd7fbaf0",
+        "group": "8afaf55a196b0d9e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "IP extern",
+        "format": "{{msg.payload.publicIPv4}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 700,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "5aa03ed1d46d4b0d",
+        "type": "ui_template",
+        "z": "37489b5dcd7fbaf0",
+        "group": "e7fd0c21c9b78d5e",
+        "name": "",
+        "order": 3,
+        "width": "4",
+        "height": "4",
+        "format": "\n\n<style>\nbody.nr-dashboard-theme {\n    background-color: #{{msg.payload}};\n    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;\n}\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 480,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97a8a205970a5e56",
+        "type": "debug",
+        "z": "37489b5dcd7fbaf0",
+        "name": "Sekunden 0-60",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.date.seconds",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "bf5f5bad443804c0",
+        "type": "debug",
+        "z": "37489b5dcd7fbaf0",
+        "name": "IP internal",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.internalIPv4",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "5bfec474e42e89f5",
+        "type": "debug",
+        "z": "37489b5dcd7fbaf0",
+        "name": "IP public",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.publicIPv4",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "7058ec10de4788cf",
+        "type": "ui_gauge",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "group": "39a659f96c5806c4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Sekunden in %",
+        "label": "%",
+        "format": "{{payload.date.seconds}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 900,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "b3188b3369988dd1",
+        "type": "ui_text",
+        "z": "37489b5dcd7fbaf0",
+        "group": "39a659f96c5806c4",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Stunde des Tages",
+        "format": "{{msg.payload.date.hours}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 710,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "4a041bdf107d0fb9",
+        "type": "ui_text",
+        "z": "37489b5dcd7fbaf0",
+        "group": "39a659f96c5806c4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Minuten 0-60",
+        "format": "{{payload.date.minutes}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 690,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "5bd08d02dded64ae",
+        "type": "ip",
+        "z": "37489b5dcd7fbaf0",
+        "name": "ip",
+        "https": false,
+        "timeout": "5000",
+        "internalIPv4": true,
+        "internalIPv6": false,
+        "publicIPv4": true,
+        "publicIPv6": false,
+        "x": 1150,
+        "y": 920,
+        "wires": [
+            [
+                "218404e32a16db91"
+            ]
+        ]
+    },
+    {
+        "id": "218404e32a16db91",
+        "type": "ui_text",
+        "z": "37489b5dcd7fbaf0",
+        "group": "39a659f96c5806c4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "IP extern",
+        "format": "{{msg.payload.publicIPv4}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1400,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "55b366ecb1223e97",
+        "type": "ui_button",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "group": "39a659f96c5806c4",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Get external IP",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 980,
+        "y": 920,
+        "wires": [
+            [
+                "5bd08d02dded64ae"
+            ]
+        ]
+    },
+    {
+        "id": "aa5b9954b604fdf6",
+        "type": "ui_template",
+        "z": "37489b5dcd7fbaf0",
+        "group": "39a659f96c5806c4",
+        "name": "",
+        "order": 7,
+        "width": "4",
+        "height": "4",
+        "format": "\n\n<style>\nbody.nr-dashboard-theme {\n    background-color: #{{msg.payload}};\n    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;\n}\n\n</style>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1160,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3fe181cc5c4668e",
+        "type": "ui_colour_picker",
+        "z": "37489b5dcd7fbaf0",
+        "name": "",
+        "label": "Colour",
+        "group": "39a659f96c5806c4",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": true,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 6,
+        "width": "5",
+        "height": "4",
+        "passthru": true,
+        "topic": "colour",
+        "topicType": "msg",
+        "className": "",
+        "x": 950,
+        "y": 960,
+        "wires": [
+            [
+                "aa5b9954b604fdf6"
+            ]
+        ]
+    },
+    {
+        "id": "2e2195496e7a3ea4",
+        "type": "comment",
+        "z": "37489b5dcd7fbaf0",
+        "name": "Verschiedene Zeitformatierungen über alle Übungen und einige Experimente mit JavaScript bzw JSON",
+        "info": "",
+        "x": 510,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8ce8862533100251",
+        "type": "comment",
+        "z": "37489b5dcd7fbaf0",
+        "name": "Übung 2.2 Seite 1 (ohne QR-Code)",
+        "info": "",
+        "x": 1040,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "aa21b70da30527cf",
+        "type": "comment",
+        "z": "37489b5dcd7fbaf0",
+        "name": "Übung 1.2 und 2.1",
+        "info": "",
+        "x": 250,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "537af3f4c4942715",
+        "type": "comment",
+        "z": "37489b5dcd7fbaf0",
+        "name": "Übung 2.2 Seite 2 (QR-Code)",
+        "info": "",
+        "x": 260,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "32db9161285be3e7",
+        "type": "comment",
+        "z": "37489b5dcd7fbaf0",
+        "name": "Spielereien mit Flow-Variablen",
+        "info": "",
+        "x": 280,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "8afaf55a196b0d9e",
+        "type": "ui_group",
+        "name": "Group-Node_SS2022",
+        "tab": "dc0f7bd13097cc6d",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "54163bbd91fb88f7",
+        "type": "ui_group",
+        "name": "Minuten_im_Dashboard",
+        "tab": "dc0f7bd13097cc6d",
+        "order": 3,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e7fd0c21c9b78d5e",
+        "type": "ui_group",
+        "name": "Zusatz",
+        "tab": "795a4e36939a3973",
+        "order": 2,
+        "disp": true,
+        "width": "5",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "39a659f96c5806c4",
+        "type": "ui_group",
+        "name": "Uebung_2-2_Group1",
+        "tab": "e973c3ba372d15bf",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dc0f7bd13097cc6d",
+        "type": "ui_tab",
+        "name": "CPP_Uebung_Tag1_SS2022",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "795a4e36939a3973",
+        "type": "ui_tab",
+        "name": "QR Code",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e973c3ba372d15bf",
+        "type": "ui_tab",
+        "name": "Uebung_2-2",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    }
+]
