@@ -1,0 +1,439 @@
+[
+    {
+        "id": "5ce64a4dbefeb5e4",
+        "type": "tab",
+        "label": "TAG2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e94d4313dba95ddc",
+        "type": "inject",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "props": [
+            {
+                "p": "url",
+                "v": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=test&color=ffffff",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "2",
+        "topic": "",
+        "x": 550,
+        "y": 120,
+        "wires": [
+            [
+                "cd637b5df9c061a4"
+            ]
+        ]
+    },
+    {
+        "id": "cd637b5df9c061a4",
+        "type": "change",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "url",
+                "pt": "msg",
+                "from": "test",
+                "fromt": "str",
+                "to": "text",
+                "tot": "flow"
+            },
+            {
+                "t": "change",
+                "p": "url",
+                "pt": "msg",
+                "from": "ffffff",
+                "fromt": "str",
+                "to": "color",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 120,
+        "wires": [
+            [
+                "d27d223455eef9f7",
+                "1aa7df99adb0374e"
+            ]
+        ]
+    },
+    {
+        "id": "d27d223455eef9f7",
+        "type": "ui_template",
+        "z": "5ce64a4dbefeb5e4",
+        "group": "e7fd0c21c9b78d5e",
+        "name": "",
+        "order": 3,
+        "width": "5",
+        "height": "5",
+        "format": "<img src=\"{{msg.url}}\"/>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1aa7df99adb0374e",
+        "type": "debug",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "url",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f34b9e41246e8904",
+        "type": "ui_colour_picker",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "label": "",
+        "group": "e7fd0c21c9b78d5e",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": true,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 2,
+        "width": "4",
+        "height": "4",
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "055adad48c65f963"
+            ]
+        ]
+    },
+    {
+        "id": "d727eedc15e79485",
+        "type": "ui_text_input",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "e7fd0c21c9b78d5e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "808fbd0256c796e0"
+            ]
+        ]
+    },
+    {
+        "id": "055adad48c65f963",
+        "type": "change",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "color",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "808fbd0256c796e0",
+        "type": "change",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "text",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e1a0d5238b55194",
+        "type": "http in",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "url": "/andi/test",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 400,
+        "wires": [
+            [
+                "5ac795f0d4d310e4"
+            ]
+        ]
+    },
+    {
+        "id": "24eb7779137aa94a",
+        "type": "http response",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "5ac795f0d4d310e4",
+        "type": "template",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "field": "headers",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Content-Type: application/json; charset=utf-8",
+        "output": "str",
+        "x": 440,
+        "y": 400,
+        "wires": [
+            [
+                "9094e844e56b4efe"
+            ]
+        ]
+    },
+    {
+        "id": "9094e844e56b4efe",
+        "type": "template",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"Text\" : \"{{flow.text}}\",\n    \"Color\" : \"{{flow.color}}\"\n}",
+        "output": "json",
+        "x": 640,
+        "y": 400,
+        "wires": [
+            [
+                "24eb7779137aa94a"
+            ]
+        ]
+    },
+    {
+        "id": "0dbaff605315235b",
+        "type": "http request",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.opensensemap.org/boxes/620e1506e00700001b59e9ad/sensors/620e1506e00700001b59e9af",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 410,
+        "y": 540,
+        "wires": [
+            [
+                "6bb6cfef7b313ec9",
+                "1839df49f87b3856"
+            ]
+        ]
+    },
+    {
+        "id": "c1c3bcba1d3f10a9",
+        "type": "inject",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 540,
+        "wires": [
+            [
+                "0dbaff605315235b"
+            ]
+        ]
+    },
+    {
+        "id": "6bb6cfef7b313ec9",
+        "type": "range",
+        "z": "5ce64a4dbefeb5e4",
+        "minin": "0",
+        "maxin": "100",
+        "minout": "0",
+        "maxout": "60",
+        "action": "scale",
+        "round": false,
+        "property": "payload.lastMeasurement.value",
+        "name": "",
+        "x": 650,
+        "y": 540,
+        "wires": [
+            [
+                "b0041e765dac3693",
+                "f2f02c5ad8737070"
+            ]
+        ]
+    },
+    {
+        "id": "1839df49f87b3856",
+        "type": "debug",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b0041e765dac3693",
+        "type": "ui_gauge",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "group": "e7fd0c21c9b78d5e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{msg.payload.lastMeasurement.value.toFixed(2)}}",
+        "min": "0",
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 850,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "f2f02c5ad8737070",
+        "type": "debug",
+        "z": "5ce64a4dbefeb5e4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.lastMeasurement.value",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "e7fd0c21c9b78d5e",
+        "type": "ui_group",
+        "name": "Zusatz",
+        "tab": "795a4e36939a3973",
+        "order": 2,
+        "disp": true,
+        "width": "5",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "795a4e36939a3973",
+        "type": "ui_tab",
+        "name": "QR Code",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]

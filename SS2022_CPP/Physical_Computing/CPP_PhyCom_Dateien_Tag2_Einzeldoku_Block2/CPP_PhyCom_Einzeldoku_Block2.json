@@ -1,0 +1,1746 @@
+[
+    {
+        "id": "75ec80122f2ddc7c",
+        "type": "tab",
+        "label": "Block2_Arduino",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f066384d8b7f4470",
+        "type": "arduino out",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pin": "13",
+        "state": "OUTPUT",
+        "arduino": "1494f23075330e32",
+        "x": 750,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "53b82f180175afd8",
+        "type": "inject",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 570,
+        "y": 80,
+        "wires": [
+            [
+                "f066384d8b7f4470"
+            ]
+        ]
+    },
+    {
+        "id": "0b3676ffe5e2ae63",
+        "type": "inject",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 570,
+        "y": 140,
+        "wires": [
+            [
+                "f066384d8b7f4470"
+            ]
+        ]
+    },
+    {
+        "id": "84207f86dc272a8b",
+        "type": "arduino in",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pin": "0",
+        "state": "ANALOG",
+        "arduino": "1494f23075330e32",
+        "x": 550,
+        "y": 420,
+        "wires": [
+            [
+                "3797218c034bf150",
+                "b817b3ff63dd6a01",
+                "ed6b0bdbe1bf5d49",
+                "5b045eb2cc13bca2"
+            ]
+        ]
+    },
+    {
+        "id": "e65161ddfdaaf663",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "3797218c034bf150",
+        "type": "delay",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "5",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 420,
+        "wires": [
+            [
+                "e65161ddfdaaf663"
+            ]
+        ]
+    },
+    {
+        "id": "a1f2ec8513acbe65",
+        "type": "arduino in",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pin": "2",
+        "state": "PULLUP",
+        "arduino": "1494f23075330e32",
+        "x": 530,
+        "y": 1140,
+        "wires": [
+            [
+                "14bde8275786232e"
+            ]
+        ]
+    },
+    {
+        "id": "ac9a4532d01bca04",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "14bde8275786232e",
+        "type": "delay",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "5",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 1140,
+        "wires": [
+            [
+                "ac9a4532d01bca04",
+                "021bc97bf1607ba7",
+                "db3c9c8d7d93db22"
+            ]
+        ]
+    },
+    {
+        "id": "b817b3ff63dd6a01",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "021bc97bf1607ba7",
+        "type": "arduino out",
+        "z": "75ec80122f2ddc7c",
+        "d": true,
+        "name": "",
+        "pin": "7",
+        "state": "OUTPUT",
+        "arduino": "1494f23075330e32",
+        "x": 970,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "ed6b0bdbe1bf5d49",
+        "type": "range",
+        "z": "75ec80122f2ddc7c",
+        "minin": "0",
+        "maxin": "1023",
+        "minout": "0",
+        "maxout": "255",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 780,
+        "y": 500,
+        "wires": [
+            [
+                "cba77fe610ec49f7",
+                "7ad398d7fa10252c"
+            ]
+        ]
+    },
+    {
+        "id": "cba77fe610ec49f7",
+        "type": "arduino out",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pin": "9",
+        "state": "PWM",
+        "arduino": "1494f23075330e32",
+        "x": 970,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "8a92dcc9abb54f53",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "0ffcd73b2562b8d5",
+        "type": "arduino out",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pin": "6",
+        "state": "OUTPUT",
+        "arduino": "1494f23075330e32",
+        "x": 930,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "5b045eb2cc13bca2",
+        "type": "range",
+        "z": "75ec80122f2ddc7c",
+        "minin": "0",
+        "maxin": "1023",
+        "minout": "0",
+        "maxout": "100",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 780,
+        "y": 560,
+        "wires": [
+            [
+                "b4d07bae936c3e73",
+                "b9dab1503c871baa",
+                "26da3e1221360852"
+            ]
+        ]
+    },
+    {
+        "id": "b4d07bae936c3e73",
+        "type": "ui_gauge",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "group": "d878396189d74f5c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{msg.payload.toFixed(2)}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 970,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d34377ec30e5d86a",
+        "type": "ui_switch",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "label": "Pin 6",
+        "tooltip": "",
+        "group": "451f63a716810c82",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 530,
+        "y": 860,
+        "wires": [
+            [
+                "8a92dcc9abb54f53",
+                "0ffcd73b2562b8d5",
+                "e2a84522fb70a4fa"
+            ]
+        ]
+    },
+    {
+        "id": "2999d224f5c98704",
+        "type": "range",
+        "z": "75ec80122f2ddc7c",
+        "minin": "0",
+        "maxin": "100",
+        "minout": "0",
+        "maxout": "255",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 740,
+        "y": 720,
+        "wires": [
+            [
+                "b46a914a0d890e34",
+                "0832e4ca022a670a"
+            ]
+        ]
+    },
+    {
+        "id": "b46a914a0d890e34",
+        "type": "arduino out",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pin": "10",
+        "state": "PWM",
+        "arduino": "1494f23075330e32",
+        "x": 930,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "ccf722023f35a41b",
+        "type": "ui_slider",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "label": "PWM Pin 10",
+        "tooltip": "",
+        "group": "451f63a716810c82",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 550,
+        "y": 720,
+        "wires": [
+            [
+                "2999d224f5c98704"
+            ]
+        ]
+    },
+    {
+        "id": "b9dab1503c871baa",
+        "type": "function",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "func": "//let num = msg.payload;\n//num += 3;\n//msg.payload = num;\nmsg.payload +=3;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 600,
+        "wires": [
+            [
+                "5cc06caf85b8e262"
+            ]
+        ]
+    },
+    {
+        "id": "5cc06caf85b8e262",
+        "type": "ui_gauge",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "group": "d878396189d74f5c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{msg.payload.toFixed(2)}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1170,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "6247b58eaf6f0d6c",
+        "type": "ui_chart",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "group": "542bd324dda32ce6",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Button-Pressed",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": "20",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1400,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f716a6724cbfa87",
+        "type": "delay",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "2",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1100,
+        "y": 1260,
+        "wires": [
+            [
+                "6247b58eaf6f0d6c"
+            ]
+        ]
+    },
+    {
+        "id": "db3c9c8d7d93db22",
+        "type": "rbe",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "func": "rbei",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 910,
+        "y": 1260,
+        "wires": [
+            [
+                "7f716a6724cbfa87",
+                "480e11b3e0537e1f"
+            ]
+        ]
+    },
+    {
+        "id": "480e11b3e0537e1f",
+        "type": "trigger",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "op1": "1",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
+        "duration": "3",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1080,
+        "y": 1320,
+        "wires": [
+            [
+                "e9eb82d152984539",
+                "ff4f7fa40fb64e80"
+            ]
+        ]
+    },
+    {
+        "id": "e9eb82d152984539",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "ff4f7fa40fb64e80",
+        "type": "http request",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.opensensemap.org/boxes/62ae2ebfb91502001b9b3e83/sensors/62ae3c77b91502001ba20721?onlyValue=true",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 1230,
+        "y": 1380,
+        "wires": [
+            [
+                "334cc58bb1d8a5a7",
+                "4a7ff323da8c68bc",
+                "30bc50c4af5356e0",
+                "722097414b054e67"
+            ]
+        ]
+    },
+    {
+        "id": "4a7ff323da8c68bc",
+        "type": "function",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "func": "num = parseInt(msg.payload);\n//num += 3;\n//msg.payload = num;\n\n\nmsg.headers = {\n    \"content-type\" : \"application/json\"\n}\nmsg.payload = {\n}\n\nif (num!==undefined && num!==null && num < 20) \n{\n    msg.payload.value = num + 1;\n}\nelse\n{\n    msg.payload.value = 1;\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 1380,
+        "wires": [
+            [
+                "4855646b23c1289f",
+                "d842887835be41e8",
+                "08f2c2c73981deaf",
+                "bca9fd8af13d8149"
+            ]
+        ]
+    },
+    {
+        "id": "4855646b23c1289f",
+        "type": "http request",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.opensensemap.org/boxes/62ae2ebfb91502001b9b3e83/62ae3c77b91502001ba20721",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 1710,
+        "y": 1300,
+        "wires": [
+            [
+                "9c8c5802bcc90bb3"
+            ]
+        ]
+    },
+    {
+        "id": "9c8c5802bcc90bb3",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1890,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "334cc58bb1d8a5a7",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1470,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "d842887835be41e8",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1710,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "71df0268ab9625f6",
+        "type": "inject",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 530,
+        "y": 1200,
+        "wires": [
+            [
+                "14bde8275786232e"
+            ]
+        ]
+    },
+    {
+        "id": "08f2c2c73981deaf",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "headers.content-type",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1760,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "bca9fd8af13d8149",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.value",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "fded9fc70b455ac7",
+        "type": "inject",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 530,
+        "y": 1260,
+        "wires": [
+            [
+                "14bde8275786232e"
+            ]
+        ]
+    },
+    {
+        "id": "8a991be7b256c289",
+        "type": "function",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "func": "num = parseInt(msg.payload);\n//num += 3;\n//msg.payload = num;\n\n\nmsg.headers = {\n    \"content-type\" : \"application/json\"\n}\nmsg.payload = {\n}\n\nmsg.payload.value = num;\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 460,
+        "wires": [
+            [
+                "eb8888febe67b533",
+                "a85f898750c7186e"
+            ]
+        ]
+    },
+    {
+        "id": "eb8888febe67b533",
+        "type": "http request",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.opensensemap.org/boxes/62ae2ebfb91502001b9b3e83/62ae2ebfb91502001b9b3e84",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 1370,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a85f898750c7186e",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1370,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "7ad398d7fa10252c",
+        "type": "delay",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "2",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1000,
+        "y": 460,
+        "wires": [
+            [
+                "8a991be7b256c289"
+            ]
+        ]
+    },
+    {
+        "id": "f0b1f2035d873d1b",
+        "type": "arduino in",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pin": "1",
+        "state": "ANALOG",
+        "arduino": "1494f23075330e32",
+        "x": 550,
+        "y": 1780,
+        "wires": [
+            [
+                "a74e6128a5a0f82f",
+                "c7f06ffaff1bfad0"
+            ]
+        ]
+    },
+    {
+        "id": "c78569f59fe59773",
+        "type": "change",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "analog1",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "13f2d6ff9af03c41",
+        "type": "function",
+        "z": "75ec80122f2ddc7c",
+        "d": true,
+        "name": "",
+        "func": "//num = parseInt(msg.payload);\n//num += 3;\n//msg.payload = num;\n\n\nmsg.headers = {\n    \"content-type\" : \"application/json\"\n}\nmsg.payload = {\n}\n\nif (flow.get(\"analog1\")!==undefined && flow.get(\"analog1\")!==null) \n{\n    msg.payload.value = flow.get(\"analog1\");\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56e4de6b12bfafd9",
+        "type": "http request",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.opensensemap.org/boxes/62ae2ebfb91502001b9b3e83/62ae50c5b91502001babf0ae",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 950,
+        "y": 1880,
+        "wires": [
+            [
+                "e3095de4dcd923ed"
+            ]
+        ]
+    },
+    {
+        "id": "ae22047b3a9eccf1",
+        "type": "inject",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "props": [
+            {
+                "p": "headers.content-type",
+                "v": "application/json",
+                "vt": "str"
+            },
+            {
+                "p": "payload.value",
+                "v": "analog1",
+                "vt": "flow"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 570,
+        "y": 1880,
+        "wires": [
+            [
+                "56e4de6b12bfafd9"
+            ]
+        ]
+    },
+    {
+        "id": "a74e6128a5a0f82f",
+        "type": "delay",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "5",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 730,
+        "y": 1780,
+        "wires": [
+            [
+                "c78569f59fe59773",
+                "9198e9fdfad90c66"
+            ]
+        ]
+    },
+    {
+        "id": "e3095de4dcd923ed",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "c7f06ffaff1bfad0",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "9198e9fdfad90c66",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "eb42bf9316234994",
+        "type": "arduino out",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "pin": "12",
+        "state": "OUTPUT",
+        "arduino": "1494f23075330e32",
+        "x": 1870,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "30bc50c4af5356e0",
+        "type": "switch",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "lte",
+                "v": "10",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1430,
+        "y": 1540,
+        "wires": [
+            [
+                "935b38e966d33d9b"
+            ],
+            [
+                "b271d6b781a90148"
+            ]
+        ]
+    },
+    {
+        "id": "935b38e966d33d9b",
+        "type": "change",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1620,
+        "y": 1520,
+        "wires": [
+            [
+                "eb42bf9316234994",
+                "fd22bf7775309efb"
+            ]
+        ]
+    },
+    {
+        "id": "b271d6b781a90148",
+        "type": "change",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1620,
+        "y": 1560,
+        "wires": [
+            [
+                "eb42bf9316234994",
+                "fd22bf7775309efb"
+            ]
+        ]
+    },
+    {
+        "id": "fd22bf7775309efb",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1890,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "42de7cad7a9f64e4",
+        "type": "ui_chart",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "group": "542bd324dda32ce6",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "From Opensense",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "255",
+        "removeOlder": "10",
+        "removeOlderPoints": "10",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#b91876",
+            "#aec7e8",
+            "#ff7f0e",
+            "#11c011",
+            "#98df8a",
+            "#9b1717",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1370,
+        "y": 2360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f290b64db562ae3f",
+        "type": "inject",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "props": [
+            {
+                "p": "headers.content-type",
+                "v": "application/json",
+                "vt": "str"
+            },
+            {
+                "p": "payload.value",
+                "v": "analog1",
+                "vt": "flow"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 550,
+        "y": 2100,
+        "wires": [
+            [
+                "a429fa080f7e95ee"
+            ]
+        ]
+    },
+    {
+        "id": "a429fa080f7e95ee",
+        "type": "http request",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.opensensemap.org/boxes/62ae2ebfb91502001b9b3e83/data/62ae2ebfb91502001b9b3e84",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 910,
+        "y": 2100,
+        "wires": [
+            [
+                "b8640a9e70c99562",
+                "0a4dc18d45a1f8d5",
+                "a0f9c34640a07894"
+            ]
+        ]
+    },
+    {
+        "id": "b8640a9e70c99562",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "0a4dc18d45a1f8d5",
+        "type": "moment",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "topic": "",
+        "input": "payload[0].createdAt",
+        "inputType": "msg",
+        "inTz": "Europe/Vienna",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "",
+        "locale": "C",
+        "output": "payload[0].createdAt1",
+        "outputType": "msg",
+        "outTz": "Europe/Vienna",
+        "x": 1200,
+        "y": 2200,
+        "wires": [
+            [
+                "230988dfa79a0d5d"
+            ]
+        ]
+    },
+    {
+        "id": "230988dfa79a0d5d",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1430,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "212e490f82039779",
+        "type": "inject",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1060,
+        "y": 2340,
+        "wires": [
+            [
+                "f1b2ec9dca90bf83"
+            ]
+        ]
+    },
+    {
+        "id": "a0f9c34640a07894",
+        "type": "function",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "func": "//num = parseInt(msg.payload);\n//num += 3;\n//msg.payload = num;\n\n\nmsg.backup = msg.payload;\n\nmsg.payload = [{\n    \"series\": [\"A\"],\n    \"labels\": [\"\"],\n    \"data\": [[]]\n}];\n\nfor (let i = 0; i < 10; i++) {\n  dateformated = Date.parse(msg.backup[i].createdAt);\n  msg.payload[0].data[0][i] = {};\n  msg.payload[0].data[0][i].y = msg.backup[i].value;\n  msg.payload[0].data[0][i].x = dateformated;\n}\n\nmsg.backup = {};\n//Date.parse\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 2260,
+        "wires": [
+            [
+                "f1b2ec9dca90bf83",
+                "42de7cad7a9f64e4"
+            ]
+        ]
+    },
+    {
+        "id": "f1b2ec9dca90bf83",
+        "type": "debug",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1310,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "1c581b14a8b24390",
+        "type": "function",
+        "z": "75ec80122f2ddc7c",
+        "d": true,
+        "name": "",
+        "func": "//num = parseInt(msg.payload);\n//num += 3;\n//msg.payload = num;\n\n\nmsg.backup = msg.payload;\n\nmsg.payload = {\n}\nfor (let i = 0; i < 10; i++) {\n  dateformated = Date.parse(msg.backup[i].createdAt);\n  msg.payload[i] = {topic:\"Volume\", payload:22};\n  msg.payload[i].timestamp = dateformated;\n}\n\n\n//Date.parse\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 2300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4236c86a163bdcd3",
+        "type": "inject",
+        "z": "75ec80122f2ddc7c",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 1030,
+        "y": 2420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e30f7f199ab4bf43",
+        "type": "comment",
+        "z": "75ec80122f2ddc7c",
+        "name": "Pin 13 kann durch die Inject-Nodes gesteuert werden",
+        "info": "",
+        "x": 700,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "37fd2bdcf348917f",
+        "type": "comment",
+        "z": "75ec80122f2ddc7c",
+        "name": "Pin A0 dimmt nach Mapping die Led am Pin 9\\n Zwei gemappte Werte werden pro Minute an OpenSenseMap uebertragen \\n Auf 0-100 gemappt wird es mittels Donut-Gauge im Dashboard angezeigt. \\n Mit einen Offset wird es in einen Halb-Rund-Gauge im Dashboard angezeigt",
+        "info": "",
+        "x": 770,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "6e7e91c34b3708c5",
+        "type": "comment",
+        "z": "75ec80122f2ddc7c",
+        "name": "Schieberegler am Dashboard steuert Led am Pin 10 per PWM",
+        "info": "",
+        "x": 700,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "9e25dd93ba3ac268",
+        "type": "comment",
+        "z": "75ec80122f2ddc7c",
+        "name": "Schalter am Dashboard steuert Led am Pin 6",
+        "info": "",
+        "x": 650,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "ef7acbac0e5ef325",
+        "type": "comment",
+        "z": "75ec80122f2ddc7c",
+        "name": "Physischer Schalter am Pin 2 triggert einen Download von Wert auf OpenSenseMap \\n Lädt die Zahl nach Erhöhung um 1 wieder hoch.\\n Ist die Zahl größer 10 wird die Led am Pin 12 eingeschalten.\\n Wird die Zahl 20 erreicht beginnt der Zähler wieder bei 1.",
+        "info": "",
+        "x": 770,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "ef60aa414ffec7dd",
+        "type": "comment",
+        "z": "75ec80122f2ddc7c",
+        "name": "LDR am Pin A1 wird in Flow-Variable gespeichert.\\n Alle 30 Sekunden wird der Wert in die OpenSenseMap gepusht.",
+        "info": "",
+        "x": 730,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "6816781aad09ba94",
+        "type": "comment",
+        "z": "75ec80122f2ddc7c",
+        "name": "Die letzten zehn A0-Werte die laufend in die OpenSenseMap geladen werden, werden heruntergeladen.\\n Die Zeitstempel müssen korrekt formatiert und das JSON richtig aufgebaut werden, dass es dann in ein XY-Diagramm am Dashboard gepusht werden kann.",
+        "info": "",
+        "x": 1020,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "0832e4ca022a670a",
+        "type": "change",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "pwmpin10",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2a84522fb70a4fa",
+        "type": "change",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "digpin6",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "26da3e1221360852",
+        "type": "change",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "A0til100",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "722097414b054e67",
+        "type": "change",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "valueCounter",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d345d14ada2c85d7",
+        "type": "http in",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "url": "/api/block2",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 560,
+        "y": 2580,
+        "wires": [
+            [
+                "1f4e7f14026b1b64"
+            ]
+        ]
+    },
+    {
+        "id": "ccac2aaed13f2c9a",
+        "type": "http response",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1130,
+        "y": 2580,
+        "wires": []
+    },
+    {
+        "id": "1f4e7f14026b1b64",
+        "type": "template",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "field": "headers",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Content-Type: application/json; charset=utf-8",
+        "output": "str",
+        "x": 760,
+        "y": 2580,
+        "wires": [
+            [
+                "fbc2ad07d3683eb2"
+            ]
+        ]
+    },
+    {
+        "id": "fbc2ad07d3683eb2",
+        "type": "template",
+        "z": "75ec80122f2ddc7c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"A0mapped100\" : \"{{flow.A0til100}}\",\n    \"A1\" : \"{{flow.analog1}}\",\n    \"SwitchDig6\" : \"{{flow.digpin6}}\",\n    \"PWMPin10\" : \"{{flow.pwmpin10}}\",\n    \"Counter\" : \"{{flow.valueCounter}}\"\n}",
+        "output": "json",
+        "x": 960,
+        "y": 2580,
+        "wires": [
+            [
+                "ccac2aaed13f2c9a"
+            ]
+        ]
+    },
+    {
+        "id": "618812321ab6ed55",
+        "type": "comment",
+        "z": "75ec80122f2ddc7c",
+        "name": "API welche die wichtigsten Daten/Zustände zur Verfügung stellt des Flows",
+        "info": "",
+        "x": 740,
+        "y": 2540,
+        "wires": []
+    },
+    {
+        "id": "1494f23075330e32",
+        "type": "arduino-board",
+        "device": "/dev/ttyACM2"
+    },
+    {
+        "id": "d878396189d74f5c",
+        "type": "ui_group",
+        "name": "Gauges",
+        "tab": "f5fd5e54b0e90eb4",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "451f63a716810c82",
+        "type": "ui_group",
+        "name": "InOut",
+        "tab": "f5fd5e54b0e90eb4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "542bd324dda32ce6",
+        "type": "ui_group",
+        "name": "Charts",
+        "tab": "f5fd5e54b0e90eb4",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f5fd5e54b0e90eb4",
+        "type": "ui_tab",
+        "name": "Arduino",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
