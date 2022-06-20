@@ -37,20 +37,20 @@ In NodeRED wurde es wie folgt umgesetzt:
 
 + Die Led an Pin 6 wird durch einen Schalter am Dashboard ein und ausgeschaltet.  
 + Die Led an Pin 9 wird durch ein Poti am Anschluss A0 mittels Mapping gedimmt.  
-+ Die Led an Pin 10 wird durch einen Schiberegler am Dashboard gedimmt.  
-+ Der Schlater an Pin 2 hat Anfangs die interne Led an Pin 13 ein und ausgeschaltet, wurde dann durch eine On- und Off-Inject-Node ersetzt.  
++ Die Led an Pin 10 wird durch einen Schieberegler am Dashboard gedimmt.  
++ Der Schalter an Pin 2 hat anfangs die interne Led an Pin 13 ein- und ausgeschaltet, wurde dann durch eine On- und Off-Inject-Node ersetzt.  
 + Das Poti am Anschluss A0 wird zusätzlich mit einen Gauge am Dashboard visualisiert.  
 
 <img src="./pics/TAG2_Dashboard_Uebung.png" alt="Dashboard Tag2" style="zoom:33%;" />
 
-Die Stuerungs des Arduinos wurden auch in Verbindung mit der OpenSenseMap und dem MG400 Roboters des Labs verwendet.  
+Die Steuerung des Arduinos wurde auch in Verbindung mit der OpenSenseMap und dem MG400 Roboters des Labs verwendet.  
 
 #### Probleme
 
-Da ich NodeRED in einem Docker-Container laufen hatte, habe ich es unter Windows, als auch unter Mac nicht geschafft das Microcontrollerboard durchzureichen und eine Verbindung in Docker per NodeRED damit herzustellen. Bei umfangreicher Recherche scheint es, dass in Windows durch WSL2 und in Mac gewisse Schranken gibt, welche das weitergeben von USB-Geräten nicht möglich macht. [Bug-Ticket](https://github.com/docker/for-mac/issues/900)  
+Da ich NodeRED in einem Docker-Container laufen hatte, habe ich es unter Windows, als auch unter Mac nicht geschafft das Microcontrollerboard durchzureichen und eine Verbindung in Docker per NodeRED damit herzustellen. Bei umfangreicher Recherche scheint es, dass in Windows durch WSL2 und in Mac gewisse Schranken gibt, welche das Weitergeben von USB-Geräten nicht möglich macht. [Bug-Ticket](https://github.com/docker/for-mac/issues/900)  
 
-In einer Linux-VM im Gegensatz, war das verbindung trotz Docker kein Problem, wenn das Gerät beim Aufruf wie folgt weitergegeben wurde:  
+In einer Linux-VM war die Verbindung trotz Docker jedoch kein Problem, wenn das Gerät beim Aufruf wie folgt weitergegeben wurde:  
 
 `docker run --rm -it -p 1880:1880 --device=/dev/ttyACM0:/dev/ttyACM0 --name mynodered nodered/node-red`
 
-Egal ob NodeRED nativ oder im Container läuft, gab es immer Probleme beim Neuverbinden mit den Mircocontroller nach einer Aktualisierung des Flows. Es wurden verschiedene Arduinos getestet. Die Bibliothek finde ich leider auch schlecht implementiert, da es nur eine Möglichkeit den Port zu definieren, aber die Baud-Rate nicht konfiguriert werden kann. Die korrekte Baud-Rate ist auch nicht in der Dokumentation angeführt. Der Standard ist zwar `57600`, aber da man die Library auch ohne Firmata für die serielle Kommunikation nutzen kann, wäre es hilfreich diese zu verstellen. Vielleicht werden auch verschiedene Baud-Rate versucht, jedoch fehlt auch hierzu jedlicher Hinweis.  
+Egal, ob NodeRED nativ oder im Container lief, es traten immer Probleme beim Neuverbinden mit den Mircocontrollern nach einer Aktualisierung des Flows auf. Es wurden verschiedene Arduinos getestet. Die Bibliothek finde ich leider schlecht implementiert, da es nur eine Möglichkeit gibt, den Port zu definieren, aber die Baud-Rate kann nicht konfiguriert werden. Die korrekte Baud-Rate ist auch nicht in der Dokumentation angeführt. Der Standard ist zwar `57600`, aber da man die Library auch ohne Firmata für die serielle Kommunikation nutzen kann, wäre es hilfreich diese zu verstellen. Vielleicht werden auch verschiedene Baud-Rate versucht, jedoch fehlt auch hierzu jedlicher Hinweis.  

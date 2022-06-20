@@ -61,7 +61,7 @@ Schalter am Dashboard steuert Led am Pin 6.
 
 ##### Zähler mittels physischen Tasters  
 
-Ein physischer Taster am Pin 2 löst einen Download eines Werts auf OpenSenseMap aus. Die Zahl wird um 1 erhöht und wieder hochgeladen. Ist die Zahl größer 10 wird die Led am Pin 12 eingeschalten. Wird die Zahl 20 erreicht beginnt der Zähler wieder bei 1. Das Drücken des Tasters wird in einem Diagramm am Dashboard dargestellt.  
+Ein physischer Taster am Pin 2 löst einen Download eines Werts auf OpenSenseMap aus. Die Zahl wird um 1 erhöht und wieder hochgeladen. Ist die Zahl größer 10 wird die Led am Pin 12 eingeschalten. Wird die Zahl 20 erreicht, beginnt der Zähler wieder bei 1. Das Drücken des Tasters wird in einem Diagramm am Dashboard dargestellt.  
 
 [Link zum Sensorwerte-JSON](https://api.opensensemap.org/boxes/62ae2ebfb91502001b9b3e83/data/62ae3c77b91502001ba20721)  
 
@@ -77,7 +77,7 @@ Der durch Licht verändernde Widerstand am Pin A1 wird in Flow-Variable gespeich
 
 ##### Werte von A0 (Download OpenSenseMap) in Diagramm  
 
-Die letzten zehn A0-Werte, die laufend in die [OpenSenseMap](https://api.opensensemap.org/boxes/62ae2ebfb91502001b9b3e83/data/62ae2ebfb91502001b9b3e84) geladen werden, werden wieder heruntergeladen. Die Zeitstempel müssen korrekt formatiert und das JSON richtig aufgebaut werden, dass die Werte in ein XY-Diagramm am Dashboard gepusht werden können.  
+Die letzten zehn A0-Werte, die laufend in die [OpenSenseMap](https://api.opensensemap.org/boxes/62ae2ebfb91502001b9b3e83/data/62ae2ebfb91502001b9b3e84) geladen werden, werden wieder heruntergeladen. Die Zeitstempel müssen korrekt formatiert und das JSON richtig aufgebaut werden, damit die Werte in ein XY-Diagramm am Dashboard gepusht werden können.  
 
 <img src="./pics/TAG2E_A0_Download.png" alt="Download OpenSensMap" style="zoom:70%;" />
 
@@ -93,9 +93,9 @@ Am Ende wurde eine API erstellt, welche die aktuellen Werte mittels JSON zur Ver
 
 ##### Probleme  
 
-Die in der Mitschrift von Tag 2 erwähnten [Verbindungsprobleme](./CPP_PhyCom_Tag2.md) stellten auch hier eine teilweise große Herausforderung dar.  
+Die in der Mitschrift von Tag 2 erwähnten [Verbindungsprobleme](./CPP_PhyCom_Tag2.md) stellten auch hier teilweise eine große Herausforderung dar.  
 
-Die Formattierung des JSON für das XY-Diagramm stelle die größte Herausforderung dar und war leider auch in NodeRED nicht klar dokumentiert. Nur durch die Versuche ein 1:1 Abbild einer [Anleitung](https://github.com/node-red/node-red-dashboard/blob/master/Charts.md#example) zu erstellen, kam es zu einem Erfolg.  
+Die Formatierung des JSON für das XY-Diagramm stellte die größte Herausforderung dar und war leider auch in NodeRED nicht klar dokumentiert. Nur durch die Versuche ein 1:1 Abbild einer [Anleitung](https://github.com/node-red/node-red-dashboard/blob/master/Charts.md#example) zu erstellen, kam es zu einem Erfolg.  
 
 
 
